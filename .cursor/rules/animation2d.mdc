@@ -1,0 +1,141 @@
+---
+description: swiftUI 2d animation guidelines
+globs: 
+---
+# SwiftUI Animation Guide
+
+## Introduction
+This guide provides an overview of using animations in SwiftUI, with a focus on best practices and modern methods.
+
+## Key Concepts
+
+### `withAnimation`
+- **Usage**: Wrap state changes that should trigger animations.
+- **Example**:
+  ```swift
+  withAnimation {
+      self.isVisible = true
+  }
+  ```
+- **Best Practice**: Preferred for explicit, imperative animations.
+
+### `.animation`
+- **Usage**: Attach an animation to a specific view.
+- **Example**:
+  ```swift
+  .animation(.default)
+  ```
+- **Legacy Use**: Still useful but more for default animations; `withAnimation` is preferred for clarity and control.
+
+## Best Practices
+
+- **State Management**: Use `withAnimation` for clear, controlled animations tied to state changes.
+- **Opacity Changes**: Bind view opacity to state and use `withAnimation` to animate changes.
+- **Modern vs. Legacy**: Prioritize `withAnimation` for modern development but know that `.animation` can still be useful for default or simpler animations.
+
+## Example Usage
+
+```swift
+struct ContentView: View {
+    @State private var isVisible = false
+
+    var body: some View {
+        Text("Hello, World!")
+            .opacity(isVisible ? 1.0 : 0.0)
+            .onAppear {
+                withAnimation {
+                    self.isVisible = true
+                }
+            }
+            .onDisappear {
+                withAnimation {
+                    self.isVisible = false
+                }
+            }
+    }
+}
+```
+
+## Animating `RealityKit` Entities
+
+### Opacity, Position, and Scale
+- **Opacity Example**: Use `withAnimation` to animate changes to a `RealityKit` entity's opacity.
+  ```swift
+  withAnimation {
+      realityEntity.model?.materials = [
+          SimpleMaterial(color: .white.opacity(isVisible ? 1.0 : 0.0), isMetallic: false)
+      ]
+  }
+  ```
+
+- **Position or Scale Example**: Animating the position or scale of a `RealityKit` entity.
+  ```swift
+  withAnimation {
+      realityEntity.transform.translation = SIMD3<Float>(x: 0, y: 1, z: 0) // New position
+      realityEntity.transform.scale = SIMD3<Float>(x: 2, y: 2, z: 2) // New scale
+  }
+  ```
+
+- **Best Practice**: Use `withAnimation` to trigger these changes for smooth transitions.
+
+## Encapsulating Complex Animations
+
+- **Function Encapsulation**: For complex animations, encapsulate the animation logic in a function within your view or a helper class.
+  ```swift
+  func performComplexAnimation() {
+      withAnimation {
+          // Complex animation logic here
+      }
+  }
+  ```
+
+- **Usage**: Call this function in response to state changes, for example:
+  ```swift
+  .onChange(of: viewModel.progress) { _ in
+      performComplexAnimation()
+  }
+  ```
+
+- **Best Practice**: Keep the ViewModel focused on state management and the view on presentation, using encapsulated functions for complex animations when necessary.
+
+## Observing Asset States for Animation
+
+You can observe asset states in a ViewModel and trigger animations in SwiftUI based on those states.
+
+```swift
+class AssetViewModel: ObservableObject {
+    @Published var progress: Double = 0.0
+
+    func loadAsset() {
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+            self.progress += 0.1
+            if self.progress >= 1.0 {
+                timer.invalidate()
+            }
+        }
+    }
+}
+```
+
+```swift
+struct LoadingView: View {
+    @ObservedObject var viewModel = AssetViewModel()
+
+    var body: some View {
+        ProgressView(value: viewModel.progress)
+            .padding()
+            .onAppear {
+                viewModel.loadAsset()
+            }
+            .onChange(of: viewModel.progress) { _ in
+                withAnimation {
+                    // Smooth animation of the progress bar
+                }
+            }
+    }
+}
+```
+
+## Conclusion
+Using `withAnimation` effectively in SwiftUI helps create smooth transitions and state-driven animations while keeping the architecture clean. Prioritizing `withAnimation` over `.animation` for modern development ensures better control and clarity. Additionally, handling animations within the view rather than the ViewModel maintains a clear separation of concerns. For complex animations, encapsulating logic into functions is a best practice for readability and maintainability.
+
