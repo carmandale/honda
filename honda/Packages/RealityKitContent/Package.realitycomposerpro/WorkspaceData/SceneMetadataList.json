@@ -11,6 +11,36 @@
       }
     ]
   },
+  "5E15EA0D-0C1B-453E-AA3C-53024BA18A60" : {
+    "objectMetadataList" : [
+      [
+        "5E15EA0D-0C1B-453E-AA3C-53024BA18A60",
+        "INT",
+        "SteeringWheel"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "5E15EA0D-0C1B-453E-AA3C-53024BA18A60",
+        "INT"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "5E15EA0D-0C1B-453E-AA3C-53024BA18A60",
+        "INT",
+        "MeshInstance_71"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
   "65F6F990-A780-4474-B78B-572E0E4E273D" : {
     "objectMetadataList" : [
       [
@@ -48,6 +78,15 @@
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root",
+        "Timeline"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
         "honda_MSR"
       ],
       {
@@ -59,6 +98,27 @@
         "Root",
         "honda_MSR",
         "offset"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
+        "Timeline",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
+        "honda_MSR",
+        "offset",
+        "INT"
       ],
       {
         "isExpanded" : true,

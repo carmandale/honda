@@ -7,12 +7,13 @@
 
 def Xform "Root"
 {
+    reorder nameChildren = ["honda_MSR", "SteeringWheel", "Timeline"]
     def Xform "honda_MSR" (
         active = true
     )
     {
         reorder nameChildren = ["INT", "EXT", "offset"]
-        float3 xformOp:translate = (0, 0.19261897, 0)
+        float3 xformOp:translate = (0, 0.19261897, -1.8533878)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "offset" (
@@ -40,10 +41,127 @@ def Xform "Root"
                 float3 xformOp:scale = (0.009999998, 0.009999998, 0.009999998)
                 float3 xformOp:translate = (0, 0.19261897, 0)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                over "MeshInstance_37" (
+                    active = false
+                )
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    float3 xformOp:translate = (0, 0, 14.975421)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                over "MeshInstance_38" (
+                    active = false
+                )
+                {
+                }
+
+                over "MeshInstance_39" (
+                    active = false
+                )
+                {
+                }
+
+                over "MeshInstance_44" (
+                    active = false
+                )
+                {
+                }
+
+                over "MeshInstance_45" (
+                    active = false
+                )
+                {
+                }
+
+                over "MeshInstance_46" (
+                    active = false
+                )
+                {
+                }
+
+                over "MeshInstance_47" (
+                    active = false
+                )
+                {
+                }
+
+                over "MeshInstance_48" (
+                    active = false
+                )
+                {
+                }
+
+                over "MeshInstance_49" (
+                    active = false
+                )
+                {
+                }
+
+                over "MeshInstance_50" (
+                    active = false
+                )
+                {
+                }
+
+                over "MeshInstance_51" (
+                    active = false
+                )
+                {
+                }
+
+                over "MeshInstance_52" (
+                    active = false
+                )
+                {
+                }
+
+                over "MeshInstance_53" (
+                    active = false
+                )
+                {
+                }
+
+                over "MeshInstance_54" (
+                    active = false
+                )
+                {
+                }
+
+                over "MeshInstance_55" (
+                    active = false
+                )
+                {
+                }
+
+                over "MeshInstance_56" (
+                    active = false
+                )
+                {
+                }
+
+                over "MeshInstance_57" (
+                    active = false
+                )
+                {
+                }
+
+                over "MeshInstance_58" (
+                    active = false
+                )
+                {
+                }
+
+                over "SteeringWheel"
+                {
+                    float3 xformOp:translate = (0, 0, 0)
+                }
             }
 
             def "EXT" (
-                active = true
+                active = false
                 customData = {
                     float3 rotationEulerHint = (-1.5707964, 0, 0)
                 }
@@ -61,6 +179,58 @@ def Xform "Root"
                     token outputs:realitykit:vertex
                 }
             }
+        }
+    }
+
+    def RealityKitTimeline "Timeline"
+    {
+        def RealityKitTrack "Track"
+        {
+            def RealityKitAction "Transform_By"
+            {
+                string actionKind = "moveBy"
+                int blendLayer = 300
+                double duration = 3
+                uniform token info:id = "EF706470-53BC-47F2-941C-FA074C6FF87D"
+                float3 position = (0.0040130615, 47.85237, -0.0006008148)
+                double startTime = 0.1269251632963493
+                rel target = </Root/honda_MSR/offset/INT/SteeringWheel>
+
+                def RealityKitStruct "timingFunction"
+                {
+                    token type = "easeInOut"
+                }
+            }
+        }
+    }
+
+    def RealityKitComponent "RCP_BehaviorsContainer"
+    {
+        rel behaviors = </Root/OnAddedToScene>
+        uniform token info:id = "RCP.BehaviorsContainer"
+    }
+
+    def Preliminary_Behavior "OnAddedToScene"
+    {
+        rel actions = </Root/OnAddedToScene/Action>
+        uniform bool exclusive
+        rel triggers = </Root/OnAddedToScene/Trigger>
+
+        def Preliminary_Trigger "Trigger"
+        {
+            rel affectedObjects = </Root>
+            token info:id = "SceneTransition"
+        }
+
+        def Preliminary_Action "Action"
+        {
+            rel affectedObjects = </Root>
+            rel animationLibraryKey = </Root/Timeline>
+            rel animationLibraryKeyOverrideKey = </Root/OnAddedToScene/Trigger>
+            token info:id = "PlayTimeline"
+            int loops = 0
+            int performCount = 1
+            token type = "serial"
         }
     }
 }

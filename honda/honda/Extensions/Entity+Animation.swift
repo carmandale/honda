@@ -606,29 +606,4 @@ extension Entity {
             transform = endTransform
         }
     }
-    
-    /// Triggers a head position update for an entity with a PositioningComponent
-    /// - Parameters:
-    ///   - animated: Whether to animate the position change
-    ///   - duration: Animation duration in seconds (only used if animated is true)
-    func checkHeadPosition(animated: Bool = false, duration: TimeInterval = 0.5) {
-        guard var positioningComponent = components[PositioningComponent.self] else {
-            Logger.debug("⚠️ Cannot check head position: No PositioningComponent found on entity '\(name)'")
-            return 
-        }
-        
-        Logger.debug("""
-        
-        🎯 Requesting head position update for entity '\(name)'
-        ├─ Current World Position: \(position(relativeTo: nil))
-        ├─ Offsets: [\(positioningComponent.offsetX), \(positioningComponent.offsetY), \(positioningComponent.offsetZ)]
-        ├─ Animated: \(animated ? "✅" : "❌")
-        └─ Duration: \(animated ? "\(duration)s" : "immediate")
-        """)
-        
-        positioningComponent.needsPositioning = true
-        positioningComponent.shouldAnimate = animated
-        positioningComponent.animationDuration = animated ? duration : 0.0
-        components[PositioningComponent.self] = positioningComponent
-    }
 }

@@ -21,6 +21,9 @@ struct ToggleImmersiveSpaceButton: View {
                     case .open:
                         appModel.immersiveSpaceState = .inTransition
                         await dismissImmersiveSpace()
+                        // Call the cleanup method to reset the immersive view state
+                        appModel.introState.cleanup()
+                        Logger.debug("🧹 Immersive space cleanup completed")
                         // Don't set immersiveSpaceState to .closed because there
                         // are multiple paths to ImmersiveView.onDisappear().
                         // Only set .closed in ImmersiveView.onDisappear().
@@ -47,6 +50,9 @@ struct ToggleImmersiveSpaceButton: View {
                         // This case should not ever happen because button is disabled for this case.
                         break
                 }
+                Logger.info("\n📍 Positioning Requested: Starting head tracking")
+                appModel.introState.shouldUpdateHeadPosition = true
+                
             }
         } label: {
             Text(appModel.immersiveSpaceState == .open ? "Hide Immersive Space" : "Show Immersive Space")

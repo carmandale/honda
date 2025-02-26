@@ -13,7 +13,7 @@ struct hondaApp: App {
     @State private var appModel = AppModel()
 
     var body: some Scene {
-        WindowGroup {
+        WindowGroup(id: AppModel.mainWindowId) {
             ContentView()
                 .environment(appModel)
         }
