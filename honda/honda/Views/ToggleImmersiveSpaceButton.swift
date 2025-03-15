@@ -13,6 +13,7 @@ struct ToggleImmersiveSpaceButton: View {
 
     @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
     @Environment(\.openImmersiveSpace) private var openImmersiveSpace
+    @Environment(\.openWindow) private var openWindow
 
     var body: some View {
         Button {
@@ -24,6 +25,8 @@ struct ToggleImmersiveSpaceButton: View {
                         // Call the cleanup method to reset the immersive view state
                         appModel.introState.cleanup()
                         Logger.debug("🧹 Immersive space cleanup completed")
+                        // Show the main window when immersive space is dismissed
+                        openWindow(id: AppModel.mainWindowId)
                         // Don't set immersiveSpaceState to .closed because there
                         // are multiple paths to ImmersiveView.onDisappear().
                         // Only set .closed in ImmersiveView.onDisappear().
@@ -44,6 +47,8 @@ struct ToggleImmersiveSpaceButton: View {
                             @unknown default:
                                 // On unknown response, assume space did not open.
                                 appModel.immersiveSpaceState = .closed
+                                // Show the main window if immersive space failed to open
+                                openWindow(id: AppModel.mainWindowId)
                         }
 
                     case .inTransition:

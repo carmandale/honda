@@ -1,0 +1,209 @@
+AppModel init() - Instance: ObjectIdentifier(0x000000015e0fc0c0)
+nw_socket_initialize_socket [C1:2] setsockopt SO_NECP_CLIENTUUID failed [22: Invalid argument]
+nw_socket_initialize_socket setsockopt SO_NECP_CLIENTUUID failed [22: Invalid argument]
+nw_socket_copy_info [C1:2] getsockopt TCP_INFO failed [102: Operation not supported on socket]
+nw_socket_copy_info getsockopt TCP_INFO failed [102: Operation not supported on socket]
+App is being debugged, do not track this hang
+Hang detected: 0.57s (debugger attached, not reporting)
+Registering library (/System/Library/PrivateFrameworks/CoreRE.framework/default.metallib) that already exists in shader manager. Library will be overwritten.
+Initializing hosting entity without a context
+
+📍 Positioning Requested: Starting head tracking
+=== Setting up IntroView ===
+
+=== INTRO ROOT SETUP in IntroViewModel ===
+├─ Root Entity: false
+├─ Scene Ready: false
+└─ Environment Loaded: false
+🔄 Starting new intro session: tracking states reset
+📱 IntroViewModel: Setting up root
+
+=== ✅ ROOT SETUP COMPLETE in IntroViewModel ===
+├─ Entity Name: IntroRoot
+├─ Position: SIMD3<Float>(0.0, -0.25, 0.25)
+└─ Has Positioning: true
+✅ Added root to content
+🎯 Head Position Update Blocked
+└─ Reason: Not ready for tracking
+📱 Starting environment setup
+
+=== ENVIRONMENT SETUP in IntroViewModel ===
+🎯 Head Position Update Retry Failed - Still Blocked
+✅ Loaded intro_environment
+
+=== ✅ ENVIRONMENT SETUP COMPLETE in IntroViewModel ===
+
+=== Environment Setup Complete ===
+✨ Environment Details
+├─ Phase: loading
+├─ Root Entity: IntroRoot
+└─ Environment: Root
+
+=== CLEANUP STARTED in IntroViewModel ===
+🧹 Immersive space cleanup completed
+
+📍 Positioning Requested: Starting head tracking
+=== ✅ CLEANUP COMPLETE in IntroViewModel ===
+├─ All state flags reset
+├─ Entity references cleared
+├─ Components removed
+└─ Ready for next immersive session
+Initializing hosting entity without a context
+
+📍 Positioning Requested: Starting head tracking
+🎯 Head Position Update Blocked
+└─ Reason: Not ready for tracking
+=== Setting up IntroView ===
+
+=== INTRO ROOT SETUP in IntroViewModel ===
+├─ Root Entity: false
+├─ Scene Ready: false
+└─ Environment Loaded: false
+🔄 Starting new intro session: tracking states reset
+📱 IntroViewModel: Setting up root
+
+=== ✅ ROOT SETUP COMPLETE in IntroViewModel ===
+├─ Entity Name: IntroRoot
+├─ Position: SIMD3<Float>(0.0, -0.25, 0.25)
+└─ Has Positioning: true
+✅ Added root to content
+📱 Starting environment setup
+
+=== ENVIRONMENT SETUP in IntroViewModel ===
+🎯 Head Position Update Retry Failed - Still Blocked
+✅ Loaded intro_environment
+
+=== ✅ ENVIRONMENT SETUP COMPLETE in IntroViewModel ===
+
+=== Environment Setup Complete ===
+✨ Environment Details
+├─ Phase: loading
+├─ Root Entity: IntroRoot
+└─ Environment: Root
+
+=== CLEANUP STARTED in IntroViewModel ===
+🧹 Immersive space cleanup completed
+
+📍 Positioning Requested: Starting head tracking
+=== ✅ CLEANUP COMPLETE in IntroViewModel ===
+├─ All state flags reset
+├─ Entity references cleared
+├─ Components removed
+└─ Ready for next immersive session
+Initializing hosting entity without a context
+
+📍 Positioning Requested: Starting head tracking
+🎯 Head Position Update Blocked
+└─ Reason: Not ready for tracking
+=== Setting up IntroView ===
+
+=== INTRO ROOT SETUP in IntroViewModel ===
+├─ Root Entity: false
+├─ Scene Ready: false
+└─ Environment Loaded: false
+🔄 Starting new intro session: tracking states reset
+📱 IntroViewModel: Setting up root
+
+=== ✅ ROOT SETUP COMPLETE in IntroViewModel ===
+├─ Entity Name: IntroRoot
+├─ Position: SIMD3<Float>(0.0, -0.25, 0.25)
+└─ Has Positioning: true
+✅ Added root to content
+📱 Starting environment setup
+
+=== ENVIRONMENT SETUP in IntroViewModel ===
+🎯 Head Position Update Retry Failed - Still Blocked
+✅ Loaded intro_environment
+
+=== ✅ ENVIRONMENT SETUP COMPLETE in IntroViewModel ===
+
+=== Environment Setup Complete ===
+✨ Environment Details
+├─ Phase: loading
+├─ Root Entity: IntroRoot
+└─ Environment: Root
+
+=== CLEANUP STARTED in IntroViewModel ===
+🧹 Immersive space cleanup completed
+
+📍 Positioning Requested: Starting head tracking
+[NetworkComponent] Trying to process with outdated syncable that has already been unbound, guid=5907939732028866492
+=== ✅ CLEANUP COMPLETE in IntroViewModel ===
+├─ All state flags reset
+├─ Entity references cleared
+├─ Components removed
+└─ Ready for next immersive session
+Initializing hosting entity without a context
+
+📍 Positioning Requested: Starting head tracking
+🎯 Head Position Update Blocked
+└─ Reason: Not ready for tracking
+=== Setting up IntroView ===
+
+=== INTRO ROOT SETUP in IntroViewModel ===
+├─ Root Entity: false
+├─ Scene Ready: false
+└─ Environment Loaded: false
+🔄 Starting new intro session: tracking states reset
+📱 IntroViewModel: Setting up root
+
+=== ✅ ROOT SETUP COMPLETE in IntroViewModel ===
+├─ Entity Name: IntroRoot
+├─ Position: SIMD3<Float>(0.0, -0.25, 0.25)
+└─ Has Positioning: true
+✅ Added root to content
+📱 Starting environment setup
+
+=== ENVIRONMENT SETUP in IntroViewModel ===
+🎯 Head Position Update Retry Failed - Still Blocked
+✅ Loaded intro_environment
+
+=== ✅ ENVIRONMENT SETUP COMPLETE in IntroViewModel ===
+
+=== Environment Setup Complete ===
+✨ Environment Details
+├─ Phase: loading
+├─ Root Entity: IntroRoot
+└─ Environment: Root
+
+=== CLEANUP STARTED in IntroViewModel ===
+🧹 Immersive space cleanup completed
+
+📍 Positioning Requested: Starting head tracking
+=== ✅ CLEANUP COMPLETE in IntroViewModel ===
+├─ All state flags reset
+├─ Entity references cleared
+├─ Components removed
+└─ Ready for next immersive session
+Initializing hosting entity without a context
+
+📍 Positioning Requested: Starting head tracking
+🎯 Head Position Update Blocked
+└─ Reason: Not ready for tracking
+=== Setting up IntroView ===
+
+=== INTRO ROOT SETUP in IntroViewModel ===
+├─ Root Entity: false
+├─ Scene Ready: false
+└─ Environment Loaded: false
+🔄 Starting new intro session: tracking states reset
+📱 IntroViewModel: Setting up root
+
+=== ✅ ROOT SETUP COMPLETE in IntroViewModel ===
+├─ Entity Name: IntroRoot
+├─ Position: SIMD3<Float>(0.0, -0.25, 0.25)
+└─ Has Positioning: true
+✅ Added root to content
+📱 Starting environment setup
+
+=== ENVIRONMENT SETUP in IntroViewModel ===
+🎯 Head Position Update Retry Failed - Still Blocked
+✅ Loaded intro_environment
+
+=== ✅ ENVIRONMENT SETUP COMPLETE in IntroViewModel ===
+
+=== Environment Setup Complete ===
+✨ Environment Details
+├─ Phase: loading
+├─ Root Entity: IntroRoot
+└─ Environment: Root

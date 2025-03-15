@@ -11,6 +11,27 @@
       }
     ]
   },
+  "4E6464E2-ED0D-48CD-92E9-A4702E31A5FC" : {
+    "objectMetadataList" : [
+      [
+        "4E6464E2-ED0D-48CD-92E9-A4702E31A5FC",
+        "SkySphere",
+        "SkySphere_mat"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "4E6464E2-ED0D-48CD-92E9-A4702E31A5FC",
+        "SkySphere"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
   "5E15EA0D-0C1B-453E-AA3C-53024BA18A60" : {
     "objectMetadataList" : [
       [
@@ -65,6 +86,38 @@
       }
     ]
   },
+  "9803847B-F7BB-417B-96C6-63B5624827CD" : {
+    "objectMetadataList" : [
+      [
+        "9803847B-F7BB-417B-96C6-63B5624827CD",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "9803847B-F7BB-417B-96C6-63B5624827CD",
+        "Root",
+        "SkySphere",
+        "SkySphere_mat"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "9803847B-F7BB-417B-96C6-63B5624827CD",
+        "Root",
+        "SkySphere"
+      ],
+      {
+        "disallowsFraming" : true,
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
   "AF09ED6F-1707-48FD-8720-65B998362C09" : {
     "objectMetadataList" : [
       [
@@ -87,38 +140,8 @@
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root",
-        "honda_MSR"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "AF09ED6F-1707-48FD-8720-65B998362C09",
-        "Root",
-        "honda_MSR",
-        "offset"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "AF09ED6F-1707-48FD-8720-65B998362C09",
-        "Root",
         "Timeline",
         "Track"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "AF09ED6F-1707-48FD-8720-65B998362C09",
-        "Root",
-        "honda_MSR",
-        "offset",
-        "INT"
       ],
       {
         "isExpanded" : true,

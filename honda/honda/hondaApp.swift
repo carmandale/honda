@@ -19,7 +19,7 @@ struct hondaApp: App {
         }
 
         ImmersiveSpace(id: appModel.immersiveSpaceID) {
-            ImmersiveView()
+            IntroView()
                 .environment(appModel)
                 .onAppear {
                     appModel.immersiveSpaceState = .open

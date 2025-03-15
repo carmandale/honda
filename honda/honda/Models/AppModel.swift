@@ -97,13 +97,13 @@ class AppModel {
     var isNavWindowOpen = false
     var navWindowId = "NavWindow"
     
-    var introState: ImmersiveViewModel
+    var introState: IntroViewModel
     let trackingManager = TrackingSessionManager()
 
     
     // MARK: Initialization
     init() {
-        self.introState = ImmersiveViewModel()
+        self.introState = IntroViewModel()
         
         // Set up dependencies
         self.introState.appModel = self

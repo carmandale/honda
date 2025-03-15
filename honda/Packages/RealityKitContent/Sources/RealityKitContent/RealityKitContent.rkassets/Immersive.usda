@@ -180,6 +180,20 @@ def Xform "Root"
                 }
             }
         }
+
+        def RealityKitComponent "ImageBasedLightReceiver"
+        {
+            rel iblEntity = </Root/honda_MSR>
+            uniform token info:id = "RealityKit.ImageBasedLightReceiver"
+        }
+
+        def RealityKitComponent "ImageBasedLight"
+        {
+            asset ibl = @SkySphere/Honda_AVP1_8k_360ST_JOTR_test_001.exr@
+            uniform token info:id = "RealityKit.ImageBasedLight"
+            float intensityExponent = 1
+            bool isGlobalIBL = 0
+        }
     }
 
     def RealityKitTimeline "Timeline"
@@ -232,6 +246,14 @@ def Xform "Root"
             int performCount = 1
             token type = "serial"
         }
+    }
+
+    def "SkySphere" (
+        active = true
+        prepend references = @SkySphere/SkySphere.usdc@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
     }
 }
 
