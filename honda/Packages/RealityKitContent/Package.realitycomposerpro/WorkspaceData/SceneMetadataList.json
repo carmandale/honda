@@ -1,4 +1,16 @@
 {
+  "09A53F70-32F7-4E92-89E2-03FD657F1F3A" : {
+    "objectMetadataList" : [
+      [
+        "09A53F70-32F7-4E92-89E2-03FD657F1F3A",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
   "0A9B4653-B11E-4D6A-850E-C6FCB621626C" : {
     "objectMetadataList" : [
       [
@@ -36,6 +48,14 @@
     "objectMetadataList" : [
       [
         "5E15EA0D-0C1B-453E-AA3C-53024BA18A60",
+        "INT"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "5E15EA0D-0C1B-453E-AA3C-53024BA18A60",
         "INT",
         "SteeringWheel"
       ],
@@ -45,7 +65,28 @@
       },
       [
         "5E15EA0D-0C1B-453E-AA3C-53024BA18A60",
-        "INT"
+        "INT",
+        "SteeringWheel",
+        "MeshInstance_49"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "5E15EA0D-0C1B-453E-AA3C-53024BA18A60",
+        "INT",
+        "SteeringWheel",
+        "steeringWheelScreen"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "5E15EA0D-0C1B-453E-AA3C-53024BA18A60",
+        "INT",
+        "MeshInstance_100"
       ],
       {
         "isExpanded" : true,
@@ -122,7 +163,68 @@
     "objectMetadataList" : [
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
+        "IntroWarp"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
+        "IntroWarp",
+        "M_jet",
+        "JetMaterial"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
+        "Timeline",
+        "Track"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
+        "IntroWarp",
+        "M_jet"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
+        "AVOID"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
+        "IntroWarp",
+        "M_jet",
+        "JetMaterial",
+        "jetNodeGraph"
       ],
       {
         "isExpanded" : true,
@@ -140,8 +242,37 @@
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root",
-        "Timeline",
-        "Track"
+        "Transform"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
+        "warp_shaped"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "B468B924-471E-424F-BFBD-3D6CD9DE8E69" : {
+    "objectMetadataList" : [
+      [
+        "B468B924-471E-424F-BFBD-3D6CD9DE8E69",
+        "root",
+        "Cylinder"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "B468B924-471E-424F-BFBD-3D6CD9DE8E69",
+        "root"
       ],
       {
         "isExpanded" : true,
@@ -195,6 +326,11 @@
         "isExpanded" : true,
         "isLocked" : false
       }
+    ]
+  },
+  "DD93B8C4-B32C-4A8B-95BF-DDB02F642EFF" : {
+    "objectMetadataList" : [
+
     ]
   }
 }

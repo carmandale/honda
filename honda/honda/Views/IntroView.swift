@@ -8,6 +8,8 @@
 import SwiftUI
 import RealityKit
 import RealityKitContent
+import AVKit
+import AVFoundation
 
 struct IntroView: View {
     @Environment(AppModel.self) private var appModel
@@ -20,6 +22,8 @@ struct IntroView: View {
             // Consider adding a breakpoint here to inspect the call stack
         }
     }
+    
+    @State private var player = AVPlayer()
     
     @State private var showNavToggle: Bool = true
     
@@ -241,6 +245,29 @@ struct IntroView: View {
                         
                         // Reset positioning flag before starting animation
                         appModel.introState.isPositioningInProgress = false
+                        
+                        // Find and set up the video material
+                        // Setup player and video material
+                        guard let url = Bundle.main.url(forResource: "AdobeStock_1051981263", withExtension: "mov") else {
+                            fatalError("movie didn't load")
+                        }
+                        
+                        let asset = AVURLAsset(url: url)
+                        let playerItem = AVPlayerItem(asset: asset)
+                        self.player.replaceCurrentItem(with: playerItem)
+                        
+                        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: playerItem, queue: .main) { _ in
+                            self.player.seek(to: CMTime.zero)
+                            self.player.play()
+                        }
+                        
+                        self.player.play()
+                        
+                        let material = VideoMaterial(avPlayer: self.player)
+                        
+                        if let screen = environment.findEntity(named: "Surface_13578") as? ModelEntity {
+                            screen.model?.materials = [material]
+                        }
                         
                         Logger.info("""
                         

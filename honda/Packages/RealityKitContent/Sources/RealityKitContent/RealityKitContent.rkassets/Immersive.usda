@@ -7,7 +7,7 @@
 
 def Xform "Root"
 {
-    reorder nameChildren = ["honda_MSR", "SteeringWheel", "Timeline"]
+    reorder nameChildren = ["honda_MSR", "Timeline", "RCP_BehaviorsContainer", "OnAddedToScene", "SkySphere", "IntroWarp", "Transform", "AVOID"]
     def Xform "honda_MSR" (
         active = true
     )
@@ -189,9 +189,9 @@ def Xform "Root"
 
         def RealityKitComponent "ImageBasedLight"
         {
-            asset ibl = @SkySphere/Honda_AVP1_8k_360ST_JOTR_test_001.exr@
+            asset ibl = @SkySphere/honda_HDR.exr@
             uniform token info:id = "RealityKit.ImageBasedLight"
-            float intensityExponent = 1
+            float intensityExponent = 1.5
             bool isGlobalIBL = 0
         }
     }
@@ -250,10 +250,288 @@ def Xform "Root"
 
     def "SkySphere" (
         active = true
-        prepend references = @SkySphere/SkySphere.usdc@
+        references = @SkySphere/SkySphere.usdc@
     )
     {
         float3 xformOp:scale = (1, 1, 1)
+    }
+
+    def "IntroWarp" (
+        active = false
+        references = @Assets/IntroWarp.usda@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0, -0.86203885, 0)
+
+        over "M_jet"
+        {
+            over "JetMaterial"
+            {
+                float inputs:Speed = 2.0308595 (
+                    customData = {
+                        dictionary realitykit = {
+                            float2 positionInSubgraph = (-536.147, 130.19284)
+                            int stackingOrderInSubgraph = 27
+                        }
+                    }
+                )
+                float inputs:TunnelMapAmount = 9.47539 (
+                    customData = {
+                        dictionary realitykit = {
+                            float2 positionInSubgraph = (-756.7344, 82.72656)
+                            float2 sizeInSubgraph = (122, 53)
+                            int stackingOrderInSubgraph = 27
+                        }
+                    }
+                )
+
+                over "jetNodeGraph"
+                {
+                    float inputs:Remap_inlow (
+                        customData = {
+                            dictionary realitykit = {
+                                float2 positionInSubgraph = (587.7347, 154.89322)
+                                int stackingOrderInSubgraph = 2381
+                            }
+                        }
+                    )
+                    float inputs:SpeedMultiple (
+                        customData = {
+                            dictionary realitykit = {
+                                float2 positionInSubgraph = (-1086.8279, 364.47565)
+                                int stackingOrderInSubgraph = 2392
+                            }
+                        }
+                    )
+                    int ui:nodegraph:node:stackingOrder = 26
+
+                    over "Ramptb"
+                    {
+                        float2 inputs:texcoord
+                        color3f inputs:valueb = (0.53382623, 0.94589096, 1) (
+                            colorSpace = "srgb_displayp3"
+                        )
+                        color3f inputs:valuet = (0.7176471, 0.003921569, 0.69411767) (
+                            colorSpace = "lin_srgb"
+                        )
+                        float2 ui:nodegraph:node:pos = (1796.0802, -102.656334)
+                        int ui:nodegraph:node:stackingOrder = 2393
+                    }
+
+                    over "Texcoord"
+                    {
+                        int inputs:index = 0
+                        float2 ui:nodegraph:node:pos = (47.0445, -114.69566)
+                        int ui:nodegraph:node:stackingOrder = 2344
+                    }
+
+                    def Shader "Transform2D"
+                    {
+                        uniform token info:id = "ND_UsdTransform2d"
+                        float2 inputs:in.connect = </Root/IntroWarp/M_jet/JetMaterial/jetNodeGraph/Texcoord.outputs:out>
+                        float inputs:rotation
+                        float2 inputs:scale = (1.12, 1)
+                        float2 inputs:scale.connect = None
+                        float2 inputs:translation.connect = None
+                        float2 outputs:out
+                        float2 ui:nodegraph:node:pos = (367.2509, 36.592575)
+                        int ui:nodegraph:node:stackingOrder = 2335
+                    }
+
+                    over "Extract"
+                    {
+                        float2 inputs:in.connect = </Root/IntroWarp/M_jet/JetMaterial/jetNodeGraph/Transform2D.outputs:out>
+                    }
+
+                    over "TriplanarProjection"
+                    {
+                        int ui:nodegraph:node:stackingOrder = 2379
+                    }
+
+                    over "Constant"
+                    {
+                        int ui:nodegraph:node:stackingOrder = 2379
+                    }
+
+                    over "Noise2D"
+                    {
+                        int ui:nodegraph:node:stackingOrder = 2379
+                    }
+
+                    over "Noise3D"
+                    {
+                        int ui:nodegraph:node:stackingOrder = 2401
+                    }
+
+                    over "Flicker_Intensity"
+                    {
+                        float inputs:value = 1
+                        int ui:nodegraph:node:stackingOrder = 2382
+                    }
+
+                    over "Range"
+                    {
+                        float inputs:inhigh = 1
+                        float inputs:inlow = 0
+                        float inputs:outhigh = 0.08160156
+                        float2 ui:nodegraph:node:pos = (1721.8169, 240.23293)
+                        int ui:nodegraph:node:stackingOrder = 2396
+                    }
+
+                    over "Range_1"
+                    {
+                        float inputs:gamma = 0.2
+                        int ui:nodegraph:node:stackingOrder = 2388
+                    }
+
+                    over "UnlitSurface"
+                    {
+                        bool inputs:applyPostProcessToneMap = 0
+                        color3f inputs:color.connect = </Root/IntroWarp/M_jet/JetMaterial/jetNodeGraph/Multiply_2.outputs:out>
+                        float inputs:opacity.connect = </Root/IntroWarp/M_jet/JetMaterial/jetNodeGraph/Dot.outputs:out>
+                        float inputs:opacityThreshold
+                        int ui:nodegraph:node:stackingOrder = 2389
+                    }
+
+                    over "Position_1"
+                    {
+                        string inputs:space = "object"
+                        int ui:nodegraph:node:stackingOrder = 2390
+                    }
+
+                    over "Time_1"
+                    {
+                        int ui:nodegraph:node:stackingOrder = 2391
+                    }
+
+                    over "Combine2"
+                    {
+                        float inputs:in1.connect = </Root/IntroWarp/M_jet/JetMaterial/jetNodeGraph/Add.outputs:out>
+                        delete float inputs:in2.connect = </Root/IntroWarp/M_jet/JetMaterial/jetNodeGraph/Add.outputs:out>
+                        float2 ui:nodegraph:node:pos = (1401.6272, 2.1782541)
+                        int ui:nodegraph:node:stackingOrder = 2395
+                    }
+
+                    def Shader "Swizzle"
+                    {
+                        uniform token info:id = "ND_swizzle_float_color3"
+                        string inputs:channels
+                        float inputs:in.connect = </Root/IntroWarp/M_jet/JetMaterial/jetNodeGraph/Noise3D.outputs:out>
+                        color3f outputs:out
+                        float2 ui:nodegraph:node:pos = (2423.9937, 95.50917)
+                        int ui:nodegraph:node:stackingOrder = 2399
+                    }
+
+                    def Shader "Convert"
+                    {
+                        uniform token info:id = "ND_convert_vector3_color3"
+                        float3 inputs:in.connect = </Root/IntroWarp/M_jet/JetMaterial/jetNodeGraph/Combine3.outputs:out>
+                        color3f outputs:out
+                        float2 ui:nodegraph:node:pos = (2527.3313, -72.90073)
+                        int ui:nodegraph:node:stackingOrder = 2400
+                    }
+                }
+            }
+        }
+    }
+
+    def Xform "Transform" (
+        active = false
+    )
+    {
+        float3 xformOp:translate = (0, 1.0346801, -5.6421013)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Xform "ParticleEmitter" (
+            customData = {
+                float3 rotationEulerHint = (1.5707964, 0, 0)
+            }
+        )
+        {
+            quatf xformOp:orient = (0.70710677, 0.70710677, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "VFXEmitter"
+            {
+                token info:id = "RealityKit.VFXEmitter"
+
+                def RealityKitStruct "currentState"
+                {
+                    float particleSpeed = 2
+
+                    def RealityKitStruct "mainEmitter"
+                    {
+                        float3 billboardAxis = (0, 0, 1)
+                        token billboardMode = "Billboard"
+                        float birthRate = 500
+                        token blendMode = "Additive"
+                        float colorEvolutionPower = 1
+                        asset particleImage = @@
+                        double particleLifeSpan = 20
+                        float particleSize = 0.005
+                        float spreadingAngle = 0.17453292
+                        float4 startColorA = (0.7176471, 0.7176471, 0.7176471, 1)
+                        float stretchFactor = 0
+                        bool useStartColorRange = 0
+                    }
+
+                    def RealityKitStruct "spawnedEmitter"
+                    {
+                    }
+                }
+            }
+        }
+    }
+
+    def Xform "AVOID" (
+        active = false
+    )
+    {
+        float3 xformOp:translate = (0, 0.98247945, -0.77384496)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Sphere "Sphere" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/AVOID/Sphere/DefaultMaterial>
+            double radius = 0.1
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Material "DefaultMaterial"
+            {
+                token outputs:surface.connect = </Root/AVOID/Sphere/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (1, 1, 1)
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
+            }
+        }
+    }
+
+    def "warp_shaped" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (-1.5707964, 0, 0)
+        }
+        prepend references = @Assets/Warp/warp_shaped.usdc@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, -0.70710677, 0, 0)
+        float3 xformOp:scale = (2, 2, 2)
+        float3 xformOp:translate = (-0.000001013279, -0.8981484, 5.2154064e-7)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 }
 

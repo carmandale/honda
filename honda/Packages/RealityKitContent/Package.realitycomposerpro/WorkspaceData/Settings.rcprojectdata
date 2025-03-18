@@ -1,6 +1,29 @@
 {
   "cameraPresets" : {
-
+    "AF09ED6F-1707-48FD-8720-65B998362C09" : [
+      {
+        "date" : 763809559.482326,
+        "title" : "seatView",
+        "transform" : [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -2.9802322e-08,
+          0.98247945,
+          -0.10711545,
+          1
+        ]
+      }
+    ]
   },
   "secondaryToolbarData" : {
     "isGridVisible" : true

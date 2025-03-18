@@ -1,0 +1,315 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (448.100.13)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 0.01
+    upAxis = "Z"
+)
+
+def Xform "Root"
+{
+    quatf xformOp:orient = (1, 0, 0, 0)
+    float3 xformOp:scale = (1, 1, 1)
+    float3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def Xform "SteeringWheel" (
+        active = true
+    )
+    {
+        reorder nameChildren = ["MeshInstance_37", "MeshInstance_38", "MeshInstance_39", "MeshInstance_44", "MeshInstance_45", "MeshInstance_46", "MeshInstance_47", "MeshInstance_48", "MeshInstance_49", "MeshInstance_50", "MeshInstance_51", "MeshInstance_52", "MeshInstance_53", "MeshInstance_54", "MeshInstance_55", "MeshInstance_56", "MeshInstance_57", "MeshInstance_58"]
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Xform "MeshInstance_37" (
+            references = @INT.usdc@</MeshPrimDef_37>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "Surface_13572"
+            {
+                rel material:binding = </INT/STEERING_COLUMN>
+            }
+        }
+
+        def Xform "MeshInstance_38" (
+            references = @INT.usdc@</MeshPrimDef_38>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "Surface_13570"
+            {
+                rel material:binding = </INT/Lighting>
+            }
+        }
+
+        def Xform "MeshInstance_39" (
+            references = @INT.usdc@</MeshPrimDef_39>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "Surface_13571"
+            {
+                rel material:binding = </INT/Lighting>
+            }
+        }
+
+        def Xform "MeshInstance_44" (
+            references = @INT.usdc@</MeshPrimDef_44>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "rail_surf_1291_trimdivide_27"
+            {
+                rel material:binding = </INT/Lighting>
+            }
+        }
+
+        def Xform "MeshInstance_45" (
+            references = @INT.usdc@</MeshPrimDef_45>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "rail_surf_1291_trimdivide_5"
+            {
+                rel material:binding = </INT/Lighting>
+            }
+        }
+
+        def Xform "MeshInstance_46" (
+            references = @INT.usdc@</MeshPrimDef_46>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "rail_surf_1291_trimdivide_7"
+            {
+                rel material:binding = </INT/Lighting>
+            }
+        }
+
+        def Xform "MeshInstance_47" (
+            references = @INT.usdc@</MeshPrimDef_47>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "rail_surf_1291_trimdivide_28"
+            {
+                rel material:binding = </INT/Lighting>
+            }
+        }
+
+        def Xform "MeshInstance_48" (
+            references = @INT.usdc@</MeshPrimDef_48>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "Fillet_srf_15_trimdivide_6_trimdivide_3"
+            {
+                rel material:binding = </INT/Lighting>
+            }
+        }
+
+        def Xform "MeshInstance_49" (
+            references = @INT.usdc@</MeshPrimDef_49>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "Fillet_srf_15_trimdivide_6_trimdivide_4"
+            {
+                rel material:binding = </INT/Lighting>
+            }
+        }
+
+        def Xform "MeshInstance_50" (
+            references = @INT.usdc@</MeshPrimDef_50>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "skin_1303_trimdivide"
+            {
+                rel material:binding = </INT/Lighting>
+            }
+        }
+
+        def Xform "MeshInstance_51" (
+            references = @INT.usdc@</MeshPrimDef_51>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "skin_1303_trimdivide_2"
+            {
+                rel material:binding = </INT/Lighting>
+            }
+        }
+
+        def Xform "MeshInstance_52" (
+            references = @INT.usdc@</MeshPrimDef_52>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "Blend_srf_2295_trimdivide"
+            {
+                rel material:binding = </INT/Lighting>
+            }
+        }
+
+        def Xform "MeshInstance_53" (
+            references = @INT.usdc@</MeshPrimDef_53>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "Blend_srf_2295_trimdivide_2"
+            {
+                rel material:binding = </INT/Lighting>
+            }
+        }
+
+        def Xform "MeshInstance_54" (
+            references = @INT.usdc@</MeshPrimDef_54>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "Surface_13575"
+            {
+                rel material:binding = </INT/CARGO_RUBBER>
+            }
+        }
+
+        def Xform "MeshInstance_55" (
+            references = @INT.usdc@</MeshPrimDef_55>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "Surface_13576"
+            {
+                rel material:binding = </INT/IP_BAR>
+            }
+        }
+
+        def Xform "MeshInstance_56" (
+            references = @INT.usdc@</MeshPrimDef_56>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "Surface_13577"
+            {
+                rel material:binding = </INT/IP_BAR>
+            }
+        }
+
+        def Xform "MeshInstance_57" (
+            references = @INT.usdc@</MeshPrimDef_57>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "Surface_13578"
+            {
+                rel material:binding = </INT/IP_BAR>
+            }
+        }
+
+        def Xform "MeshInstance_58" (
+            references = @INT.usdc@</MeshPrimDef_58>
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 14.975421142578126, 1) )
+            float3 xformOp:translate = (0, 0, 14.975421)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "Surface_13579"
+            {
+                rel material:binding = </INT/SCREEN>
+            }
+        }
+    }
+}
+
