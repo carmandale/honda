@@ -6,3 +6,8 @@
 *.exr filter=lfs diff=lfs merge=lfs -text
 *.hdr filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
+
+# Exclude Reality Composer Pro project files from LFS
+honda/Packages/RealityKitContent/Package.realitycomposerpro/ProjectData/* -filter=lfs -diff=lfs -merge=lfs text
+honda/Packages/RealityKitContent/Package.realitycomposerpro/WorkspaceData/* -filter=lfs -diff=lfs -merge=lfs text
+honda/Packages/RealityKitContent/Package.realitycomposerpro/PluginData/* -filter=lfs -diff=lfs -merge=lfs text
